@@ -19,7 +19,7 @@ final class Issue : UUIDModel, TimestampModel {
     var status: Status = .open
     var projectId: UUID
     var project: Parent<Issue, Project> {
-        return parent(\.id)!
+        return parent(\.projectId)
     }
     
     init(subject: String, body: String, projectId: UUID) {

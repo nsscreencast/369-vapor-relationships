@@ -1,4 +1,4 @@
 module CCryptoOpenSSL {
-    umbrella "/Users/ben/Desktop/Vapor series/tracker-relationships-rec/.build/checkouts/crypto.git-4828202292919736460/Sources/CCryptoOpenSSL/include"
+    umbrella "/Users/ben/Dropbox/NSScreencast-Production/episodes/369-vapor-relationships/source/tracker-relationships/.build/checkouts/crypto.git--6090787445721361121/Sources/CCryptoOpenSSL/include"
     export *
 }

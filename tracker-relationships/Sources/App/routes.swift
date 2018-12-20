@@ -25,4 +25,15 @@ public func routes(_ router: Router) throws {
             }
         }
     }
+    
+    router.get("issue") { req -> Future<String> in
+        return Issue.find(UUID("45b69719-84f1-465b-9eaa-d5713f3916c1")!, on: req).flatMap { issue in
+            guard let issue = issue else {
+                throw Abort(.notFound)
+            }
+            return issue.project.get(on: req).map { project in
+                return "Issue's project is: \(project.title)"
+            }
+        }
+    }
 }
